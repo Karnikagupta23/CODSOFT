@@ -60,7 +60,7 @@ public class NumberGuessGame {
             }
         }
 
-        System.out.println("\n🏁 Game Over!");
+        System.out.println("\n Game Over!");
         System.out.println("Total Rounds Played: " + roundsPlayed);
         System.out.println("Rounds Won: " + roundsWon);
         System.out.println("Thanks for playing! ");
