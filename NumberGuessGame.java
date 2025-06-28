@@ -12,7 +12,7 @@ public class NumberGuessGame {
         int roundsWon = 0;
         boolean playAgain = true;
 
-        System.out.println("🎯 Welcome to the Number Guessing Game!");
+        System.out.println("Welcome to the Number Guessing Game!");
         System.out.println("Guess a number between 1 and 100.");
 
         while (playAgain) {
@@ -20,13 +20,13 @@ public class NumberGuessGame {
             int attempts = 0;
             boolean guessedCorrectly = false;
 
-            System.out.println("\n🔄 Round " + (roundsPlayed + 1) + " begins! You have " + MAX_ATTEMPTS + " attempts.");
+            System.out.println("\n Round " + (roundsPlayed + 1) + " begins! You have " + MAX_ATTEMPTS + " attempts.");
 
             while (attempts < MAX_ATTEMPTS) {
                 System.out.print("Attempt " + (attempts + 1) + ": Enter your guess: ");
                 
                 if (!scanner.hasNextInt()) {
-                    System.out.println("⚠️ Please enter a valid number.");
+                    System.out.println("Please enter a valid number.");
                     scanner.next(); // skip invalid input
                     continue;
                 }
@@ -35,11 +35,11 @@ public class NumberGuessGame {
                 attempts++;
 
                 if (guess < target) {
-                    System.out.println("📉 Too low!");
+                    System.out.println(" Too low!");
                 } else if (guess > target) {
-                    System.out.println("📈 Too high!");
+                    System.out.println(" Too high!");
                 } else {
-                    System.out.println("🎉 Correct! You guessed it in " + attempts + " attempts.");
+                    System.out.println(" Correct! You guessed it in " + attempts + " attempts.");
                     guessedCorrectly = true;
                     roundsWon++;
                     break;
@@ -47,7 +47,7 @@ public class NumberGuessGame {
             }
 
             if (!guessedCorrectly) {
-                System.out.println("❌ You've used all attempts. The correct number was: " + target);
+                System.out.println("You've used all attempts. The correct number was: " + target);
             }
 
             roundsPlayed++;
@@ -63,7 +63,7 @@ public class NumberGuessGame {
         System.out.println("\n🏁 Game Over!");
         System.out.println("Total Rounds Played: " + roundsPlayed);
         System.out.println("Rounds Won: " + roundsWon);
-        System.out.println("Thanks for playing! 😊");
+        System.out.println("Thanks for playing! ");
 
         scanner.close();
     }
